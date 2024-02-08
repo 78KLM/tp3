@@ -32,10 +32,10 @@ $LesNationalites = $_REQUEST->fetchALL();
                     echo "<td class='col-md-7'>$nationalite->libelle</td>";
                     echo "<td class='col-md-3'>
                     <a href='formNat.php?action=Modifier&num=$nationalite->num' class='btn btn-primary'><i class='fa-solid fa-pen'></i>Modifier la nationalité <a>
-                    <a href='' class='btn btn-danger'><i class='fa-solid fa-trash'></i>Supprimer la nationalité <a>
+                    <a href='#supprNat' data-toggle='modal' data-suppr='supprNat.php?num=$nationalite->num' class='btn btn-danger'><i class='fa-solid fa-trash'></i>Supprimer la nationalité <a>
                     </td>";
                     echo "</tr>" ;
-                
+                ///supprNat.php?num=$nationalite->num
                 }
                 ?>
                 
@@ -44,6 +44,28 @@ $LesNationalites = $_REQUEST->fetchALL();
             </table>
     </div>
 
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div id='supprNat' class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirmation de suppréssion</h5>
+      </div>
+      <div class="modal-body">
+        Voulez vous vraiment supprimer cette nationalité ?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sucess" data-dismiss="modal">Ne pas supprimer</button>
+        <a href="" class="btn btn-danger">Supprimer</a>
+      </div>
+    </div> <!---supprNat.php?num=--->
+  </div>
+</div>
   
     
 
