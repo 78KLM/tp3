@@ -33,16 +33,7 @@ if($nb==1){
     echo '<div class="alert alert-dismissible alert-danger">
   <button type="button" class="close" data-dismiss="alert">&times;</button>
   <strong>Le genre n\'a pas  été '. $message .' !</strong></div>';
-}?>
-    </div>
-</div>
-<a href="listeDesGenres.php" class="btn btn-primary"> Revenir à la liste des nationalité</a>
-
-
-    </div>
-
-  
-    
-
-
-<?php include "footer.php"; ?>
+}
+  header('location:listeNationalites.php');
+    exit();
+    ?>
